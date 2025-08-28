@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio — Modern Techy",
-  description: "A modern, animated tech portfolio",
+  title: "Portfolio — Aaditya Raj",
+  description: "Aaditya Raj",
 };
 
 export default function RootLayout({ children }) {
