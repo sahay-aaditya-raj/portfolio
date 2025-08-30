@@ -18,8 +18,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}> 
+        {/* Early script to set initial theme before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { const s = localStorage.getItem('theme'); const t = (s==='light'||s==='dark') ? s : 'dark'; const c = document.documentElement.classList; t==='dark' ? (c.add('dark'), c.remove('light')) : (c.add('light'), c.remove('dark')); } catch {} })();`,
+          }}
+        />
         {/* Header is included per-page to allow anchor scrolling offset; layout wraps global bg */}
         <div className="relative min-h-dvh">
           {/* background visuals */}

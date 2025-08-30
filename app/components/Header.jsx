@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,7 +15,7 @@ export default function Header() {
   const nav = [
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
+    { href: "#education", label: "Education" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
     { href: "#awards", label: "Awards" },
@@ -27,13 +28,16 @@ export default function Header() {
         <Link href="#top" className="font-semibold tracking-tight text-xl">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400">MyPortfolio</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          {nav.map((n) => (
-            <a key={n.href} href={n.href} className="opacity-80 hover:opacity-100 transition-opacity">
-              {n.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            {nav.map((n) => (
+              <a key={n.href} href={n.href} className="opacity-80 hover:opacity-100 transition-opacity">
+                {n.label}
+              </a>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
