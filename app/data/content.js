@@ -124,6 +124,13 @@ export const projects = [
     link: "#",
   },
   {
+    title: "Money Management Software",
+    description:
+      "A comprehensive tool for tracking income, expenses, and budgeting, built with Next.js.",
+    tags: ["Next.js", "React", "REST API", "MongoDB", "ShadCN", "TailwindCSS"],
+    link: "https://github.com/sahay-aaditya-raj/money-management",
+  },
+  {
     title: "Stock Management System for Aztec LifeScience Pvt. Ltd.",
     description:
       "Full-stack inventory management with item tracking, stock history, and invoice generation for a small-scale business.",
@@ -151,6 +158,7 @@ export const projects = [
     tags: ["Python", "Web Scraping", "Pandas", "Kivy", "KivyMD"],
     link: "#",
   },
+
 ];
 
 export const experience = [
