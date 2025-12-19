@@ -6,7 +6,7 @@ export const profile = {
     "A computer science student interested in creating practical tech solutions that have an impact on the real world. Enjoy deep-diving into software engineering, IoT, and machine learning, also love working across projects to create scalable solutions in the software world as well as real-time systems and a workoholic who dives into the work and won’t get peace until it is finished.",
   email: "sahay.aaditya.raj@gmail.com",
   positions: [
-    { label: "Coding Club RVCE — Junior Core Team Member" },
+    { label: "Coding Club RVCE — President" },
     { label: "SPARK IUCEE × RVCE Industry Connect — People's Operations Head" },
   ],
   links: {
@@ -71,6 +71,7 @@ export const skills = [
   { name: "MySQL", level: 1 },
   { name: "PostgreSQL", level: 2 },
   { name: "MongoDB", level: 2 },
+  { name: "Docker", level: 2 },
     ],
   },
   {
@@ -90,8 +91,6 @@ export const skills = [
   { name: "ESP32 Modules", level: 2 },
   { name: "Project Management", level: 2 },
   { name: "Data Structures and Algorithms", level: 1 },
-  { name: "Agentic AI", level: 0 },
-  { name: "MCP", level: 0 },
     ],
   },
   {
@@ -112,9 +111,9 @@ export const projects = [
   {
     title: "8th Mile Fest Website",
     description:
-      "Engineered the official website for RVCE’s 8th Mile Fest with Razorpay/PhonePe payments, dynamic pass generation, and secure backend workflows.",
-    tags: ["Next.js", "MongoDB", "Razorpay", "PhonePe API", "Backend", "Vercel"],
-    link: "https://github.com/sahay-aaditya-raj/8th-mile-website",
+      "Engineered the official website for RVCE’s 8th Mile Fest with Cashfree payments, dynamic pass generation, and secure backend workflows. Handled transactions exceeding ₹3.5 Lakhs during the event.",
+    tags: ["Next.js", "MongoDB", "Cashfree", "Backend", "Vercel"],
+    link: "https://8thmile.rvce.edu.in",
   },
   {
     title: "Human Violence Detection System",
