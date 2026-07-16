@@ -132,7 +132,7 @@ export const projects = [
     description:
       "Engineered the official website for RVCE’s 8th Mile Fest, supporting 400+ concurrent users during registrations. Evaluated Razorpay and PhonePe before integrating the Cashfree SDK, processing ₹3,00,000+ with automated payment verification and dynamic pass generation.",
     tags: ["Next.js", "MongoDB", "Cashfree SDK", "Payments", "Vercel"],
-    link: "https://8thmile.rvce.edu.in",
+    link: "https://github.com/sahay-aaditya-raj/8th-mile-website",
   },
   {
     title: "Human Violence Detection System",
