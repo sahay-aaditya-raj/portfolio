@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Portfolio — Aaditya Raj",
-  description: "Aaditya Raj",
+  description: "Aaditya Raj — Software Engineer | Software Engineering, IoT, ML & Cybersecurity",
 };
 
 export default function RootLayout({ children }) {

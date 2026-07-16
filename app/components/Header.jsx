@@ -18,6 +18,7 @@ export default function Header() {
     { href: "#education", label: "Education" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#leadership", label: "Leadership" },
     { href: "#awards", label: "Awards" },
     { href: "#workshops", label: "Workshops" },
   ];
@@ -29,7 +30,7 @@ export default function Header() {
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400">MyPortfolio</span>
         </Link>
         <div className="flex items-center gap-4">
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-4 text-sm">
             {nav.map((n) => (
               <a key={n.href} href={n.href} className="opacity-80 hover:opacity-100 transition-opacity">
                 {n.label}

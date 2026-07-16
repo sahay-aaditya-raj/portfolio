@@ -2,15 +2,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Reveal from "./components/Reveal";
 import Image from "next/image";
-import { profile, education, skills, projects, experience, awards, workshops } from "./data/content";
+import { profile, education, skills, projects, experience, leadership, awards, workshops } from "./data/content";
 
 export default function Home() {
   return (
     <div id="top">
       <Header />
-  <main className="section py-10"  id="about">
+      <main className="section py-10" id="about">
         {/* Intro (Personal + About) */}
-    <section className="min-h-screen flex items-center">
+        <section className="min-h-screen flex items-center">
           <div className="w-full grid md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-7">
               <Reveal>
@@ -35,13 +35,13 @@ export default function Home() {
                 </Reveal>
               ) : null}
               {/* About inline so it's visible initially */}
-      <Reveal className="mt-4">
+              <Reveal className="mt-4">
                 <h2 className="sr-only">About</h2>
                 <p className="max-w-2xl text-balance opacity-80">
                   {profile.summary}
                 </p>
               </Reveal>
-      <Reveal className="mt-6">
+              <Reveal className="mt-6">
                 <div className="flex flex-wrap gap-3">
                   <a href={`mailto:${profile.email}`} className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500 text-white shadow-lg shadow-cyan-500/20">
                     Contact Me
@@ -76,16 +76,16 @@ export default function Home() {
                 <div className="text-sm uppercase tracking-widest opacity-60">Quick Stats</div>
                 <div className="mt-4 grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-semibold">5+</div>
+                    <div className="text-3xl font-semibold">7+</div>
                     <div className="opacity-70 text-sm">Projects</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-semibold">1+</div>
-                    <div className="opacity-70 text-sm">Years</div>
+                    <div className="text-3xl font-semibold">2</div>
+                    <div className="opacity-70 text-sm">Internships</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-semibold">100%</div>
-                    <div className="opacity-70 text-sm">Passion</div>
+                    <div className="text-3xl font-semibold">20+</div>
+                    <div className="opacity-70 text-sm">Events Led</div>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Categories (Languages, Technologies, Other Technical Skills, Soft Skills) */}
+                  {/* Categories (Languages, Technologies, Cybersecurity & SOC, Other Technical Skills, Soft Skills) */}
                   <div className="mt-6 space-y-6">
                     {skills.map((group, i) => (
                       <div key={i}>
@@ -146,7 +146,7 @@ export default function Home() {
         </section>
 
         {/* Education */}
-  <section id="education" className="py-10">
+        <section id="education" className="py-10">
           <Reveal>
             <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Education</h2>
           </Reveal>
@@ -168,11 +168,8 @@ export default function Home() {
           </div>
         </section>
 
-  {/* Education */}
-        
-
         {/* Projects */}
-  <section id="projects" className="py-10">
+        <section id="projects" className="py-10">
           <Reveal>
             <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Projects</h2>
           </Reveal>
@@ -196,7 +193,7 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-  <section id="experience" className="py-10">
+        <section id="experience" className="py-10">
           <Reveal>
             <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Experience</h2>
           </Reveal>
@@ -217,10 +214,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Awards */}
-  <section id="awards" className="py-10">
+        {/* Leadership */}
+        <section id="leadership" className="py-10">
           <Reveal>
-            <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Awards</h2>
+            <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Leadership</h2>
+          </Reveal>
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            {leadership.map((l, i) => (
+              <Reveal key={i}>
+                <div className="card card-hover p-6 h-full">
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="text-lg font-semibold">{l.role} — {l.org}</h3>
+                    <span className="text-sm opacity-70">{l.period}</span>
+                  </div>
+                  <ul className="mt-3 list-disc ms-5 opacity-80">
+                    {l.points?.map((pt, idx) => <li key={idx}>{pt}</li>)}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* Awards */}
+        <section id="awards" className="py-10">
+          <Reveal>
+            <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Awards & Certifications</h2>
           </Reveal>
           <div className="mt-8 grid md:grid-cols-2 gap-6">
             {awards.map((a, i) => (
@@ -245,7 +264,7 @@ export default function Home() {
         </section>
 
         {/* Workshops */}
-  <section id="workshops" className="py-10">
+        <section id="workshops" className="py-10">
           <Reveal>
             <h2 className="title-underline text-2xl sm:text-3xl font-semibold">Workshops</h2>
           </Reveal>
