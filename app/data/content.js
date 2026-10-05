@@ -22,7 +22,7 @@ export const education = [
     school: "R.V. College Of Engineering, Bengaluru, India",
     degree: "B.E. in Computer Science and Engineering",
     period: "Sep 2023 — Jun 2027",
-    details: ["CGPA: 8.87/10.00"],
+    details: ["CGPA: 8.98/10.00"],
   },
   {
     school: "St. Karen’s High School, Patna, India",
@@ -73,6 +73,7 @@ export const skills = [
       { name: "PostgreSQL", level: 2 },
       { name: "MongoDB", level: 2 },
       { name: "Docker", level: 2 },
+      { name: "Github Webhooks", level: 2},
     ],
   },
   {
@@ -94,7 +95,7 @@ export const skills = [
       { name: "Git & GitHub", level: 2 },
       { name: "OOP", level: 2 },
       { name: "Functional Programming", level: 2 },
-      { name: "CI/CD", level: 1 },
+      { name: "CI/CD", level: 2 },
       { name: "IoT Integration", level: 2 },
       { name: "Embedded Programming", level: 2 },
       { name: "REST", level: 2 },
@@ -127,6 +128,15 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    title: "Mini Self-Hosted CI/CD Platform",
+    description:
+      "Built a self-hosted CI/CD platform that automates GitHub-triggered builds and deployments using HMAC-verified webhooks, a persistent build queue, automated health checks, blue-green zero-downtime deployments, reverse-proxy load balancing, and rollback support.",
+    tags: [
+      "Python", "FastAPI", "GitHub Webhooks", "CI/CD", "Blue-Green Deployment", "Load Balancing", "DevOps"
+    ],
+    link: "https://github.com/sahay-aaditya-raj/ci-cdPipeline",
+  },
   {
     title: "8th Mile Fest Website",
     description:
